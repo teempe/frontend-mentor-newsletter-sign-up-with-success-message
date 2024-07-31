@@ -1,0 +1,18 @@
+:root {    
+    --color-white: rgba(255, 255, 255, 1);
+    --color-grey-25: rgba(25, 24, 43, 0.25);
+    --color-pale-navy-100: rgba(54, 56, 77, 1);
+    --color-dark-navy-100: rgba(36, 39, 66, 1);
+    --color-dark-navy-50: rgba(36, 39, 66, 0.5);
+    --color-vermellion-100: rgba(255, 97, 85, 1);
+    --color-vermellion-50: rgba(255, 97, 85, 0.5);
+    --color-vermellion-15: rgba(255, 97, 85, 0.15);
+    --color-gradient-1: linear-gradient(0deg, #FF6A3A, #FF527B);
+
+    --shadow-card: 0rem 1.5rem 6rem 0rem rgba(0, 0, 0, 0.25);
+    --shadow-button-active: 0rem 1.6rem 3.2rem 0rem var(--color-vermellion-50);
+
+    --ff-body: "Roboto", sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
