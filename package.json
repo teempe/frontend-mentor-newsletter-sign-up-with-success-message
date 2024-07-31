@@ -1,0 +1,16 @@
+{
+  "name": "newsletter-sign-up-with-success-message",
+  "version": "1.0.0",
+  "description": "Frontend Mentor - Newsletter sign-up form with success message",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/style.scss css/style.css -w",
+    "compile:sass": "sass sass/style.scss css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.8"
+  }
+}
