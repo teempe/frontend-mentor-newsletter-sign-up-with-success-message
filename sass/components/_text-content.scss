@@ -1,0 +1,9 @@
+.text-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+
+    &__email {
+        font-weight: var(--fw-bold);
+    }
+}

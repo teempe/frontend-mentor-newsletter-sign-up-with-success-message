@@ -21,37 +21,53 @@
     <body>
 
         <!-- Sign-up form start -->
+        <div class="card card--signup">
+            <img src="assets/images/illustration-sign-up-mobile.svg" alt="" class="card__image">
+            <div class="card__content">
+                <div class="text-content">
+                    <h1 class="heading">Stay updated!</h1>
+                    <p class="">Join 60,000+ product managers receiving monthly updates on:</p>
+                    <ul class="features-list">
+                        <li class="features-list__item">Product discovery and building what matters</li>
+                        <li class="features-list__item">Measuring to ensure updates are a success</li>
+                        <li class="features-list__item">And much more!</li>
+                    </ul>
+                </div>
+                
+                <form action="/" novalidate class="signup-form">
+                    <div class="form-input">
+                        <label for="email" class="form-input__label">Email address</label>
+                        <p class="form-input__error">Valid email required</p>
+                        <input type="email" name="email" id="email" placeholder="email@company.com" class="form-input__field">
+                    </div>
 
-        <h1 class="heading">Stay updated!</h1>
-        <p>
-        Join 60,000+ product managers receiving monthly updates on:
-
-        Product discovery and building what matters
-        Measuring to ensure updates are a success
-        And much more!
-
-        Email address
-        email@company.com
-
-        Subscribe to monthly newsletter
-        </p>
-
+                    <button type="submit" class="button">Subscribe to monthly newsletter</button>
+                </form>
+            </div>
+        </div>
         <!-- Sign-up form end -->
 
         <!-- Success message start -->
-        <p>
-        Thanks for subscribing!
+        <div class="card card--success card--hidden">
+            <img src="assets/images/icon-success.svg" alt="" class="card__image">
+            <div class="card__content">
+                <div class="text-content">
+                    <h1 class="heading">Thanks for subscribing!</h1>
+                    
+                    <p>
+                    A confirmation email has been sent to <span class="text-content__email">ash@loremcompany.com</span>. 
+                    Please open it and click the button inside to confirm your subscription.
+                    </p>
+                </div>
 
-        A confirmation email has been sent to ash@loremcompany.com. 
-        Please open it and click the button inside to confirm your subscription.
-
-        Dismiss message
-        </p>
+                <button type="submit" class="button">Dismiss message</button>
+            </div>
+        </div>
         <!-- Success message end -->
 
-        <div class="attribution">
+        <!-- <div class="attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
             Coded by <a href="#">Your Name Here</a>.
-        </div>
+        </div> -->
     </body>
 </html>

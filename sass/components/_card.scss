@@ -1,0 +1,35 @@
+.card {
+    background-color: var(--color-white);
+    max-width: 37.5rem;
+
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    row-gap: 4rem;
+
+    height: 100vh;
+
+    &__image {}
+
+    &__content {
+        display: grid;
+        row-gap: 4rem;
+    }
+
+    &--signup {
+        & .card__content {
+            padding: 0rem 2.4rem 4rem;
+        }
+    }
+
+    &--success {
+        padding: 14.9rem 2.4rem 4rem;
+        
+        & .card__content {
+            grid-template-rows: 1fr 5.6rem;
+        }
+    }
+
+    &--hidden {
+        display: none;
+    }
+}

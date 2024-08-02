@@ -1,0 +1,58 @@
+.form-input {
+    display: grid;
+    grid-template-areas: 
+        "label error"
+        "field field";
+    grid-template-rows: 1fr 5.6rem;
+        
+    row-gap: 0.2rem;
+
+    &__label {
+        grid-area: label;
+        font-size: 1.2rem;
+        font-weight: var(--fw-bold);
+    }
+
+    &__field {
+        grid-area: field;
+        cursor: pointer;
+
+        padding-left: 2.4rem;
+        border-radius: 0.8rem;
+        border: 0.1rem solid var(--color-grey-25);
+        outline: none;
+
+        font-family: inherit;
+        font-size: inherit;
+
+        &:focus {
+            border: 0.1rem solid var(--color-dark-navy-100);
+        }
+    }
+
+    &__error {
+        display: none;
+
+        grid-area: error;
+        font-size: 1.2rem;
+        font-weight: var(--fw-bold);
+        color: var(--color-vermellion-100);
+        justify-self: end;
+    }
+
+    &::placeholder {
+        color: var(--color-dark-navy-50);
+    }
+
+    &--error {
+        .form-input__error {
+            display: inline;
+        }
+
+        .form-input__field {
+            border: 0.1rem solid var(--color-vermellion-100);
+            background-color: var(--color-vermellion-15);
+            color: var(--color-vermellion-100);
+        }
+    }
+}
