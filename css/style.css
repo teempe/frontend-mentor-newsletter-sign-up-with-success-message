@@ -1,0 +1,205 @@
+:root {
+  --color-white: rgba(255, 255, 255, 1);
+  --color-grey-25: rgba(25, 24, 43, 0.25);
+  --color-pale-navy-100: rgba(54, 56, 77, 1);
+  --color-dark-navy-100: rgba(36, 39, 66, 1);
+  --color-dark-navy-50: rgba(36, 39, 66, 0.5);
+  --color-vermellion-100: rgba(255, 97, 85, 1);
+  --color-vermellion-50: rgba(255, 97, 85, 0.5);
+  --color-vermellion-15: rgba(255, 97, 85, 0.15);
+  --color-gradient-1: linear-gradient(0deg, #FF527B, #FF6A3A);
+  --shadow-card: 0rem 1.5rem 6rem 0rem rgba(0, 0, 0, 0.25);
+  --shadow-button-active: 0rem 1.6rem 3.2rem 0rem var(--color-vermellion-50);
+  --ff-body: "Roboto", sans-serif;
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-pale-navy-100);
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-regular);
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+}
+
+.heading {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-bold);
+  font-style: normal;
+  font-size: 4rem;
+  line-height: 1em;
+}
+@media only screen and (min-width: 90em) {
+  .heading {
+    font-size: 5.6rem;
+  }
+}
+
+.card {
+  background-color: var(--color-white);
+  max-width: 37.5rem;
+  display: grid;
+  grid-template-areas: "image" "content";
+  grid-template-rows: max-content 1fr;
+  gap: 4rem;
+}
+.card__image {
+  grid-area: image;
+}
+.card__content {
+  grid-area: content;
+  display: grid;
+  row-gap: 4rem;
+}
+.card--signup .card__content {
+  padding: 0rem 2.4rem 4rem;
+}
+.card--success {
+  height: 100vh;
+  padding: 14.9rem 2.4rem 4rem;
+}
+.card--success .card__content {
+  grid-template-rows: 1fr 5.6rem;
+}
+.card--hidden {
+  display: none;
+}
+@media only screen and (min-width: 90em) {
+  .card {
+    max-width: 92.8rem;
+    grid-template-areas: "content image";
+    grid-template-rows: 1fr;
+    gap: 2.4rem;
+    padding: 2.4rem;
+    border-radius: 3.6rem;
+  }
+  .card--signup .card__content {
+    padding: 7.4rem 4rem;
+  }
+  .card--success {
+    height: auto;
+    max-width: 50.4rem;
+    padding: 4.8rem 6.4rem 6.4rem;
+    grid-template-areas: "image" "content";
+    gap: 4rem;
+  }
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.4rem;
+}
+.text-content__email {
+  font-weight: var(--fw-bold);
+}
+
+.features-list {
+  list-style-type: none;
+  display: grid;
+  row-gap: 1rem;
+}
+.features-list__item {
+  display: flex;
+  column-gap: 1.6rem;
+}
+.features-list__item::before {
+  content: "";
+  display: block;
+  width: 2.1rem;
+  height: 2.1rem;
+  background-image: url("../assets/images/icon-list.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 0 0 2.1rem;
+}
+
+.signup-form {
+  display: grid;
+  grid-template-rows: 1fr 5.6rem;
+  row-gap: 2.4rem;
+}
+
+.form-input {
+  display: grid;
+  grid-template-areas: "label error" "field field";
+  grid-template-rows: 1fr 5.6rem;
+  row-gap: 0.2rem;
+}
+.form-input__label {
+  grid-area: label;
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
+}
+.form-input__field {
+  grid-area: field;
+  cursor: pointer;
+  padding-left: 2.4rem;
+  border-radius: 0.8rem;
+  border: 0.1rem solid var(--color-grey-25);
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+.form-input__field:focus {
+  border: 0.1rem solid var(--color-dark-navy-100);
+}
+.form-input__error {
+  display: none;
+  grid-area: error;
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-vermellion-100);
+  justify-self: end;
+}
+.form-input::placeholder {
+  color: var(--color-dark-navy-50);
+}
+.form-input--error .form-input__error {
+  display: inline;
+}
+.form-input--error .form-input__field {
+  border: 0.1rem solid var(--color-vermellion-100);
+  background-color: var(--color-vermellion-15);
+  color: var(--color-vermellion-100);
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.8rem;
+  background-color: var(--color-dark-navy-100);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: var(--fw-bold);
+  color: var(--color-white);
+}
+.button:active, .button:hover {
+  background: var(--color-gradient-1);
+  box-shadow: var(--shadow-button-active);
+}
+
+/*# sourceMappingURL=style.css.map */
