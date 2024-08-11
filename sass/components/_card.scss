@@ -1,16 +1,23 @@
+@use "../abstracts";
+
+
 .card {
     background-color: var(--color-white);
     max-width: 37.5rem;
 
     display: grid;
+    grid-template-areas: 
+        "image"
+        "content";
     grid-template-rows: max-content 1fr;
-    row-gap: 4rem;
+    gap: 4rem;
 
-    height: 100vh;
-
-    &__image {}
+    &__image {
+        grid-area: image;
+    }
 
     &__content {
+        grid-area: content;
         display: grid;
         row-gap: 4rem;
     }
@@ -22,6 +29,7 @@
     }
 
     &--success {
+        height: 100vh;
         padding: 14.9rem 2.4rem 4rem;
         
         & .card__content {
@@ -31,5 +39,52 @@
 
     &--hidden {
         display: none;
+    }
+
+    @media only screen and (min-width: abstracts.$bp-desktop) {
+        // background-color: var(--color-white);
+        max-width: 92.8rem;
+
+        // display: grid;
+        grid-template-areas: 
+            "content image";
+        grid-template-rows: 1fr;
+        // grid-template-columns: ;
+        gap: 2.4rem;
+        padding: 2.4rem;
+        border-radius: 3.6rem;
+
+        // &__image {
+        //     grid-area: image;
+        // }
+
+        // &__content {
+        //     grid-area: content;
+        //     display: grid;
+        //     row-gap: 4rem;
+        // }
+
+        &--signup {
+            & .card__content {
+                padding: 7.4rem 4rem;
+            }
+        }
+
+        &--success {
+            height: auto;
+            max-width: 50.4rem;
+            padding: 4.8rem 6.4rem 6.4rem;
+            grid-template-areas: 
+                "image"
+                "content";
+            gap: 4rem;
+            // & .card__content {
+            //     grid-template-rows: 1fr 5.6rem;
+            // }
+        }
+
+        // &--hidden {
+        //     display: none;
+        // }
     }
 }

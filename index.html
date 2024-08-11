@@ -22,7 +22,11 @@
 
         <!-- Sign-up form start -->
         <div class="card card--signup">
-            <img src="assets/images/illustration-sign-up-mobile.svg" alt="" class="card__image">
+            <picture class="card__image">
+                <source media="(min-width: 90em)" srcset="./assets/images/illustration-sign-up-desktop.svg" type="image/png">
+                <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+            </picture>
+            
             <div class="card__content">
                 <div class="text-content">
                     <h1 class="heading">Stay updated!</h1>
