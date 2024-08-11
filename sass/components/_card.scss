@@ -42,27 +42,14 @@
     }
 
     @media only screen and (min-width: abstracts.$bp-desktop) {
-        // background-color: var(--color-white);
         max-width: 92.8rem;
 
-        // display: grid;
         grid-template-areas: 
             "content image";
         grid-template-rows: 1fr;
-        // grid-template-columns: ;
         gap: 2.4rem;
         padding: 2.4rem;
         border-radius: 3.6rem;
-
-        // &__image {
-        //     grid-area: image;
-        // }
-
-        // &__content {
-        //     grid-area: content;
-        //     display: grid;
-        //     row-gap: 4rem;
-        // }
 
         &--signup {
             & .card__content {
@@ -78,13 +65,6 @@
                 "image"
                 "content";
             gap: 4rem;
-            // & .card__content {
-            //     grid-template-rows: 1fr 5.6rem;
-            // }
         }
-
-        // &--hidden {
-        //     display: none;
-        // }
     }
 }
