@@ -18,7 +18,7 @@
         <div class="card card--signup">
             <picture class="card__image">
                 <source media="(min-width: 90em)" srcset="./assets/images/illustration-sign-up-desktop.svg" type="image/png">
-                <img src="./assets/images/illustration-sign-up-mobile.svg" alt="">
+                <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Newsletter sign-up illustration">
             </picture>
             
             <div class="card__content">
@@ -35,8 +35,8 @@
                 <form action="/" novalidate class="signup-form">
                     <div class="form-input">
                         <label for="email" class="form-input__label">Email address</label>
-                        <p class="form-input__error">Valid email required</p>
-                        <input type="email" name="email" id="email" placeholder="email@company.com" class="form-input__field">
+                        <p class="form-input__error" aria-live="polite">Valid email required</p>
+                        <input type="email" name="email" id="email" placeholder="email@company.com" class="form-input__field" aria-required="true" aria-label="Email address">
                     </div>
 
                     <button type="submit" class="button">Subscribe to monthly newsletter</button>
@@ -46,8 +46,8 @@
         <!-- Sign-up form end -->
 
         <!-- Success message start -->
-        <div class="card card--success card--hidden">
-            <img src="assets/images/icon-success.svg" alt="" class="card__image">
+        <div class="card card--success card--hidden" role="alert" aria-live="assertive">
+            <img src="assets/images/icon-success.svg" alt="Success icon" class="card__image">
             <div class="card__content">
                 <div class="text-content">
                     <h1 class="heading">Thanks for subscribing!</h1>
@@ -62,7 +62,7 @@
             </div>
         </div>
         <!-- Success message end -->
-         
+
         <script type="module" src="./js/script.js"></script>
     </body>
 </html>
